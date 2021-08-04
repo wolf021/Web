@@ -32,7 +32,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')))//upload fol
 
 //database
 
-const CONNECTION_DB = 'mongodb+srv://wolf9021:wolf9021@cluster0.fgymn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const CONNECTION_DB = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.fgymn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 
 const PORT = process.env.PORT || 4000
